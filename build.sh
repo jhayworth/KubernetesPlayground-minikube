@@ -31,12 +31,21 @@ elif [ "$1" == "run-container" ]; then
 
 elif [ "$1" == "minikube-deploy" ]; then
 
-    cd $BASEDIR/service
+    cd $BASEDIR/k8s
 
-    # Just the pod?
-    # minikube kubectl -- apply -f service-helloworld.yaml
+    minikube kubectl -- apply -f k8s-namespace.yaml
+    minikube kubectl -- apply -f k8s-deployment.yaml
+    minikube kubectl -- apply -f k8s-service.yaml
 
-    # Spaceholder for helm chart
+elif [ "$1" == "minikube-service" ]; then
 
+    minikube service hello-world -n hello-world
+    
+elif [ "$1" == "minikube-cleanup" ]; then
+
+    minikube kubectl -- delete service hello-world -n hello-world
+    minikube kubectl -- delete deployment hello-world -n hello-world
+    minikube kubectl -- delete namespace hello-world
+    
 fi
 

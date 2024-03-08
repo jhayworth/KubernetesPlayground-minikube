@@ -1,21 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
-    app: helloworld-minikube
-  name: helloworld-minikube
+    app: hello-world
+  name: hello-world
+  namespace: hello-world
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: helloworld-minikube
+      app: hello-world
+  replicas: 1
   strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
-        app: helloworld-minikube
+        app: hello-world
     spec:
       containers:
       - image: service-helloworld
@@ -23,7 +22,6 @@ spec:
         resources: {}
         imagePullPolicy: Never
         ports:
-          - name: web-port
+          - name: http-port
             containerPort: 5000
             protocol: TCP
-status: {}

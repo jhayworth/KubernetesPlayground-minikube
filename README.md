@@ -36,11 +36,33 @@
 
 ### Deploy!
 
-  ```./build.sh minikube-deploy```
+  ```
+  ./build.sh minikube-deploy
+  minikube service minikube-helloworld
+  ```
 
   Deploy service container to local instance of minikube
 
   URL: [http://localhost:5002](http://127.0.0.1:5002)
+
+
+### Launch the service
+
+  ```
+  ./build.sh minikube-service
+  ```
+
+  Launches the service in the browser so that it is visible to the user
+
+  URL: [http://192.168.49.2:30088/](http://192.168.49.2:30088/)
+
+### Cleanup
+
+  ```
+  ./build.sh minikube-cleanup
+  ```
+
+  Cleans up our mess and removes all minikube objects that we've deployed
 
 ## AWS specific commands
 
