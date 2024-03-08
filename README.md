@@ -55,7 +55,7 @@
 ### Cleanup
 
   ```
-  ./build.sh minikube-cleanup
+  ./build.sh cleanup
   ```
 
   Cleans up our mess and removes all minikube objects that we've deployed

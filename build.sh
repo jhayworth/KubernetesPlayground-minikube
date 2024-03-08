@@ -41,11 +41,16 @@ elif [ "$1" == "minikube-service" ]; then
 
     minikube service hello-world -n hello-world
     
-elif [ "$1" == "minikube-cleanup" ]; then
+elif [ "$1" == "cleanup" ]; then
 
     minikube kubectl -- delete service hello-world -n hello-world
     minikube kubectl -- delete deployment hello-world -n hello-world
     minikube kubectl -- delete namespace hello-world
+
+
+elif [ "$1" == "helm-deploy" ]; then
     
+    helm install hello-world --namespace hello-world --create-namespace .
+
 fi
 
