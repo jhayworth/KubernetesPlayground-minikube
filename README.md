@@ -1,6 +1,7 @@
 ## Python Hello World Application
 
 ### Initialize!
+  **(This has NOT been implemented)**
 
   ```./build.sh init```
 
