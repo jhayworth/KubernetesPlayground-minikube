@@ -1,48 +1,61 @@
 ## Python Hello World Application
 
-### build.sh init
-  (This has been implemented)
+### Initialize!
+
+  ```build.sh init```
 
   Initialize Terraform
 
-### build.sh run-local-debug
-  (This has been implemented)
+### Run the Python service locally
+
+  ```build.sh run-local-debug```
 
   Test the Flask web API program
 
   URL: http://127.0.0.1:5000
 
-### build.sh contain
-  (This has been implemented)
+### Wrap the service in a docker container
+
+  ```build.sh contain```
 
   Contain the Flask API service
 
   --minikube
   This flag will build the container using the minikube docker daemon
+  ```./build.sh contain minikube```
 
-### build.sh run-container
-  (This has been implemented)
+### Run the container
+
+  ```build.sh run-container```
 
   Test the service locally from within the container.
 
-  URL: http://127.0.0.1:5001
+  URL: [link](http://127.0.0.1:5001)
 
-### build.sh standup-repository
-  (This has NOT been implemented)
+## Minikube specific commands
 
-  Run terraform to create the Docker container repository
+### Deploy!
 
-### build.sh publish-container
-  (This has NOT been implemented)
-  
-  Publish the docker container to Docker container repository
-
-build.sh minikube-deploy
-  (This has been implemented)
+  ```build.sh minikube-deploy```
 
   Deploy service container to local instance of minikube
 
-  URL: http://127.0.0.1:5002
+  URL: [link](http://127.0.0.1:5002)
 
+## AWS specific commands
+
+### Standing up the repository
+  **(This has NOT been implemented)**
+
+  ```build.sh standup-repository```
+
+  Run terraform to create the Docker container repository
+
+### Publishing the container
+  **(This has NOT been implemented)**
+
+  ```build.sh publish-container```
+
+  Publish the docker container to Docker container repository
 
 
