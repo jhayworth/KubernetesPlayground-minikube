@@ -36,10 +36,7 @@
 
 ### Deploy!
 
-  ```
-  ./build.sh minikube-deploy
-  minikube service minikube-helloworld
-  ```
+  ```./build.sh minikube-deploy```
 
   Deploy service container to local instance of minikube
 
@@ -48,9 +45,7 @@
 
 ### Launch the service
 
-  ```
-  ./build.sh minikube-service
-  ```
+  ```./build.sh minikube-service```
 
   Launches the service in the browser so that it is visible to the user
 
