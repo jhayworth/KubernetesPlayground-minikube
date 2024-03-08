@@ -15,6 +15,10 @@ elif [ "$1" == "run-local-debug" ]; then
 
 elif [ "$1" == "contain" ]; then
 
+    if [ "$2" == "minikube" ]; then
+	eval $(minikube docker-env)
+    fi
+    
     cd $BASEDIR/service
     docker build . -t service-helloworld
 
@@ -24,6 +28,11 @@ elif [ "$1" == "run-container" ]; then
 	       --detach \
 	       --publish 127.0.0.1:5001:5000 \
 	       service-helloworld
-    
+
+elif [ "$1" == "minikube-deploy" ]; then
+
+    minikube kubectl -- create deployment helloworld-minikube --image=service-helloworld
+    minikube kubectl -- expose deployment helloworld-minikube --type=NodePort --port 5002
+
 fi
 
