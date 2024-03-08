@@ -49,8 +49,15 @@ elif [ "$1" == "cleanup" ]; then
 
 
 elif [ "$1" == "helm-deploy" ]; then
+
+    cd $BASEDIR/helm
     
-    helm install hello-world --namespace hello-world --create-namespace .
+    helm upgrade --install hello-world --namespace hello-world --create-namespace .
+    
+    export NODE_PORT=$(minikube kubectl -- get --namespace hello-world -o jsonpath="{.spec.ports[0].nodePort}" services hello-world)
+    export NODE_IP=$(minikube kubectl -- get nodes --namespace hello-world -o jsonpath="{.items[0].status.addresses[0].address}")
+
+    curl http://$NODE_IP:$NODE_PORT
 
 fi
 

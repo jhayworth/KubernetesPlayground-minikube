@@ -1,6 +1,6 @@
 replicaCount: 1
 image:
-  repository: hello-world
+  containerName: service-helloworld
   pullPolicy: Never
 
 imagePullSecrets: []
