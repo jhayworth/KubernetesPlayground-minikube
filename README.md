@@ -2,13 +2,13 @@
 
 ### Initialize!
 
-  ```build.sh init```
+  ```./build.sh init```
 
   Initialize Terraform
 
 ### Run the Python service locally
 
-  ```build.sh run-local-debug```
+  ```./build.sh run-local-debug```
 
   Test the Flask web API program
 
@@ -16,7 +16,7 @@
 
 ### Wrap the service in a docker container
 
-  ```build.sh contain```
+  ```./build.sh contain```
 
   Contain the Flask API service
 
@@ -26,7 +26,7 @@
 
 ### Run the container
 
-  ```build.sh run-container```
+  ```./build.sh run-container```
 
   Test the service locally from within the container.
 
@@ -36,7 +36,7 @@
 
 ### Deploy!
 
-  ```build.sh minikube-deploy```
+  ```./build.sh minikube-deploy```
 
   Deploy service container to local instance of minikube
 
@@ -47,14 +47,14 @@
 ### Standing up the repository
   **(This has NOT been implemented)**
 
-  ```build.sh standup-repository```
+  ```./build.sh standup-repository```
 
   Run terraform to create the Docker container repository
 
 ### Publishing the container
   **(This has NOT been implemented)**
 
-  ```build.sh publish-container```
+  ```./build.sh publish-container```
 
   Publish the docker container to Docker container repository
 

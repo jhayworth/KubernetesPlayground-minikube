@@ -31,8 +31,12 @@ elif [ "$1" == "run-container" ]; then
 
 elif [ "$1" == "minikube-deploy" ]; then
 
-    minikube kubectl -- create deployment helloworld-minikube --image=service-helloworld
-    minikube kubectl -- expose deployment helloworld-minikube --type=NodePort --port 5002
+    cd $BASEDIR/service
+
+    # Just the pod?
+    # minikube kubectl -- apply -f service-helloworld.yaml
+
+    # Spaceholder for helm chart
 
 fi
 
