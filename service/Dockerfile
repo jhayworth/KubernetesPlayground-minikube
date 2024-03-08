@@ -7,3 +7,5 @@ RUN pip3 install -r requirements.txt
 
 ENTRYPOINT [ "python" ]
 CMD ["hello-world.py" ]
+
+EXPOSE 5000
