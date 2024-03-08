@@ -12,7 +12,10 @@ build.sh run-debug
 
 build.sh contain
 
-  
+  Contain the Flask API service  
+
+build.sh run-container
+
 
 
 build.sh publish-container
